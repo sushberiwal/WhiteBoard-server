@@ -34,11 +34,12 @@ io.on('connection', (socket) => {
 
 
 app.get("/" , function(req,res){
-    res.end("<h1>Welcome to main Page</h1>")
+    res.end("Welcome to main Page")
 })
 
 
 // server is live at localhost:5000
-http.listen(3000, function(){
-    console.log("Server started at port 3000 !")
+let port = process.env.PORT || 3000;
+http.listen(port, function(){
+    console.log("Server started!")
 });
